@@ -5,21 +5,21 @@
 class Mb < Formula
   desc "Markbase CLI: sync your team's agent skills into Claude Code, Codex and more"
   homepage "https://markbase.cloud"
-  version "0.1.0"
+  version "0.2.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.markbase.cloud/releases/0.1.0/mb_darwin_amd64.tar.gz"
-      sha256 "3db21024c9cf774ae5cfd1a7ac803f7645f96d191cd3138bb3c500ac5445c20a"
+      url "https://get.markbase.cloud/releases/0.2.0/mb_darwin_amd64.tar.gz"
+      sha256 "a6183568658528422a387e10b98fdeae9e3c16f061a2d311427cb4058a084d66"
 
       define_method(:install) do
         bin.install "mb"
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.markbase.cloud/releases/0.1.0/mb_darwin_arm64.tar.gz"
-      sha256 "90a159a76e7747d1685dff96e513ec3403b64108c67df4837ef1a78d2f3bef84"
+      url "https://get.markbase.cloud/releases/0.2.0/mb_darwin_arm64.tar.gz"
+      sha256 "4ec4aae030bc0700002570a38c7cdf5f5dd92bed4b7f4606047c57653ed4c1ae"
 
       define_method(:install) do
         bin.install "mb"
@@ -29,15 +29,15 @@ class Mb < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.markbase.cloud/releases/0.1.0/mb_linux_amd64.tar.gz"
-      sha256 "be1b42633b463cfe2fbe4df955ff68d5f66904f83bafba75084ec494bc98f7c0"
+      url "https://get.markbase.cloud/releases/0.2.0/mb_linux_amd64.tar.gz"
+      sha256 "8623194b75bd4b2fa42b84dc01c1d2417d6621c77edbcdaf18a04a1d982ff9e0"
       define_method(:install) do
         bin.install "mb"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.markbase.cloud/releases/0.1.0/mb_linux_arm64.tar.gz"
-      sha256 "ecccf675288f8f978cc332cab28b6cb479a5cd6efc6c3a8d33b89016de71ed52"
+      url "https://get.markbase.cloud/releases/0.2.0/mb_linux_arm64.tar.gz"
+      sha256 "b51c98756aee4c3a318982d412a5130b5854e8084ae23a0a64c55451ec407a97"
       define_method(:install) do
         bin.install "mb"
       end
