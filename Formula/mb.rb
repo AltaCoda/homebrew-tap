@@ -5,21 +5,21 @@
 class Mb < Formula
   desc "Bench47 CLI: sync your team's agent skills into Claude Code, Codex and more"
   homepage "https://bench47.com"
-  version "0.4.0"
+  version "0.4.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.markbase.cloud/releases/0.4.0/mb_darwin_amd64.tar.gz"
-      sha256 "6b395c0e90b57948d31730b6c2708c7f03194eb79792ab326136d073fb3862b1"
+      url "https://get.bench47.com/releases/0.4.1/mb_darwin_amd64.tar.gz"
+      sha256 "4d267e9a06562dfa7a13bb4e18ffa1bab3b62a1e27ed6a8b54e65dd9d8ffb8b3"
 
       define_method(:install) do
         bin.install "mb"
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.markbase.cloud/releases/0.4.0/mb_darwin_arm64.tar.gz"
-      sha256 "707cc6dc079fcd73e2f4709ca482980565a6f5577b2a0866559a87b26767fce4"
+      url "https://get.bench47.com/releases/0.4.1/mb_darwin_arm64.tar.gz"
+      sha256 "9145bc9fb502bb04b7e7c218a8d7bc386bfd1b93742e2ade2e42b4d29d6b5347"
 
       define_method(:install) do
         bin.install "mb"
@@ -29,15 +29,15 @@ class Mb < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.markbase.cloud/releases/0.4.0/mb_linux_amd64.tar.gz"
-      sha256 "eb8d9b94fdc8f791cc95c12a894b7f4f2a6ddc79459e0e0fd6c1d17459dcc366"
+      url "https://get.bench47.com/releases/0.4.1/mb_linux_amd64.tar.gz"
+      sha256 "35aab897cb8341a3a7600368cb48500b64ebcc9dff1db46151ec60dc925db099"
       define_method(:install) do
         bin.install "mb"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.markbase.cloud/releases/0.4.0/mb_linux_arm64.tar.gz"
-      sha256 "c6199baa39a08baac24b1b534a61aad82dee5cef111881cb0b93f10e065f1b87"
+      url "https://get.bench47.com/releases/0.4.1/mb_linux_arm64.tar.gz"
+      sha256 "d3ab687f66fa2eddaba044af32718d87d63235a2789f149b97c3c5583dfa09aa"
       define_method(:install) do
         bin.install "mb"
       end
