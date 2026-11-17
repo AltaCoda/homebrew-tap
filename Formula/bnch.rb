@@ -5,21 +5,21 @@
 class Bnch < Formula
   desc "Bench47 CLI and Dispatch runner: team skills for your agents, and jobs on your machines"
   homepage "https://bench47.com"
-  version "0.9.2"
+  version "0.9.3"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.bench47.com/bnch/releases/0.9.2/bnch_darwin_amd64.tar.gz"
-      sha256 "545a26270eae3089861772863cdf17c9d30c5dd6ef16ab819c43c476855e2319"
+      url "https://get.bench47.com/bnch/releases/0.9.3/bnch_darwin_amd64.tar.gz"
+      sha256 "6aed0984f2ee2fb64d317e7c673be043de13da2328d61dab74db1e3553702595"
 
       define_method(:install) do
         bin.install "bnch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.bench47.com/bnch/releases/0.9.2/bnch_darwin_arm64.tar.gz"
-      sha256 "0540ceba23c501dbb3242a6baa554599db4c6898a73f03cc2b12832ab4e51d88"
+      url "https://get.bench47.com/bnch/releases/0.9.3/bnch_darwin_arm64.tar.gz"
+      sha256 "943b21d3c6b5ef8eb46b3b942b83fbdef1c4d7c5a65a8d16bd8bf70f89548cf0"
 
       define_method(:install) do
         bin.install "bnch"
@@ -29,15 +29,15 @@ class Bnch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.bench47.com/bnch/releases/0.9.2/bnch_linux_amd64.tar.gz"
-      sha256 "ccaad5cf7f056172f2eb69c68a5a2fde223e6636660a97870b7edc65dbcdf654"
+      url "https://get.bench47.com/bnch/releases/0.9.3/bnch_linux_amd64.tar.gz"
+      sha256 "53296cc031f3166e6f79b145dbe63fa6b24740756b03601017c03b12fc18ca2b"
       define_method(:install) do
         bin.install "bnch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.bench47.com/bnch/releases/0.9.2/bnch_linux_arm64.tar.gz"
-      sha256 "7c037909ae519fc7a1b753da8048431932d1f3f6694a5588c9d8e12023064b43"
+      url "https://get.bench47.com/bnch/releases/0.9.3/bnch_linux_arm64.tar.gz"
+      sha256 "dc5311b917070572385152f311d1b29ecb3c463db43ce9d7ea27c72ce0e5357b"
       define_method(:install) do
         bin.install "bnch"
       end
